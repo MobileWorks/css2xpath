@@ -453,7 +453,7 @@
     return result;
   }
 
-  function css2xpath(s, nested) {
+  export default function css2xpath(s, nested) {
     // s = s.trim();
 
     if (nested === true) {
@@ -538,13 +538,6 @@
 
     s = prependAxis(s, './/'); // prepend ".//" axis to begining of CSS selector
     return s;
-  }
-
-
-  if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
-    module.exports = css2xpath;
-  } else {
-    window.css2xpath = css2xpath;
   }
 
 })();
